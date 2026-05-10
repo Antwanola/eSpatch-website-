@@ -2,6 +2,7 @@ import { Box, Button, Flex, Text } from '@chakra-ui/react';
 import { MdGpsFixed } from "react-icons/md";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaShieldAlt, FaLeaf, FaFileContract } from "react-icons/fa";
+import BikeViewer from './MiniComponents/BikeViewer';
 import React from 'react';
 
 const ArrowForward = IoIosArrowRoundForward as React.ElementType;
@@ -93,9 +94,10 @@ const Hero: React.FC<Props> = () => {
                     letterSpacing={'tight'}
                     color={'white'}
                     fontWeight={'700'}
-                    lineHeight={'1.05'}
+                    lineHeight={'1.07'}
                     mb={10}
                     mt={10}
+                    fontFamily={'Syne'}
                 >
                     Lagos Deliveries.{' '}
                     <Box color={'text.green'} as={'span'}>Fully Electric.</Box>{' '}
@@ -150,8 +152,9 @@ const Hero: React.FC<Props> = () => {
                     ))}
                 </Flex>
             </Box>
-
-            <Box position={'relative'} zIndex={1}>Box2</Box>
+            <Box position="relative" zIndex={1}>
+                <BikeViewer src="/bike.png" autoRotate={true} />
+            </Box>
         </Flex>
     );
 };

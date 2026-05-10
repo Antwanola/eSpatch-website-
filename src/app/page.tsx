@@ -7,11 +7,11 @@ import WhiteCTA from "./component/whiteCTA";
 export default function Home() {
   return (
     <>
-    <MainMargin>
-       <Hero />
+      <MainMargin>
+        <Hero />
         <Stats />
-    </MainMargin>
-      <WhiteCTA/>
+      </MainMargin>
+      <WhiteCTA />
 
     </>
   );

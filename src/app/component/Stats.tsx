@@ -1,7 +1,11 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
+import { PiMotorcycleFill } from "react-icons/pi";
+import { FaBatteryFull } from "react-icons/fa";
+import { MdOutlineBolt } from "react-icons/md";
+import { TbClockHour4Filled } from "react-icons/tb";
 import React from 'react';
 
-interface Props {}
+interface Props { }
 
 const Stats: React.FC<Props> = () => {
   return (
@@ -19,10 +23,10 @@ const Stats: React.FC<Props> = () => {
       divideColor="gray"
     >
       {[
-        { value: '81',   label: 'Electric Motocycles', sub: 'ACTIVE FLEET' },
-        { value: '5',    label: 'Battery Swap Stations', sub: 'ACROSS LAGOS' },
-        { value: '10',   label: 'Fast Charge Units', sub: 'FAST CHARGE' },
-        { value: '100%', label: 'Owned & Managed', sub: 'FULL CONTROL' },
+        { value: '81', label: 'Electric Motocycles', sub: 'ACTIVE FLEET', icon: <PiMotorcycleFill /> },
+        { value: '5', label: 'Battery Swap Stations', sub: 'ACROSS LAGOS', icon: <FaBatteryFull /> },
+        { value: '10', label: 'Fast Charge Units', sub: 'FAST CHARGE', icon: <MdOutlineBolt /> },
+        { value: '100%', label: 'Owned & Managed', sub: 'FULL CONTROL', icon: <TbClockHour4Filled />, },
       ].map((item) => (
         <Flex
           key={item.sub}
@@ -33,13 +37,16 @@ const Stats: React.FC<Props> = () => {
           w={{ base: '50%', md: 'auto' }}
           flex={{ md: 1 }}
         >
-          <Box alignSelf={'center'} as={'header'} color={'button'} fontWeight={700} fontSize={'4xl'}>
+          <Box alignSelf={'center'} fontSize={'sm'} color={'button'} bgColor={'#00867b21'} p={2} borderRadius={'xl'} border={'1px ridge #00867b'}>
+            {item.icon}
+          </Box>
+          <Box alignSelf={'center'} as={'header'} color={'button'} fontWeight={700} fontSize={'4xl'} fontFamily={'Syne'} >
             {item.value}
           </Box>
-          <Text alignSelf={'center'} letterSpacing={0.5} color={'gray.400'} textAlign={'center'}>
+          <Text alignSelf={'center'} letterSpacing={0.5} color={'gray.400'} textAlign={'center'} fontFamily={'Syne'}>
             {item.label}
           </Text>
-          <Text alignSelf={'center'} color={'Graytext'} fontSize={'xs'}>
+          <Text alignSelf={'center'} color={'Graytext'} fontSize={'xs'} fontFamily={'Syne'}>
             {item.sub}
           </Text>
         </Flex>

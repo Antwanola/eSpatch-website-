@@ -56,10 +56,12 @@ export default function Header() {
             >
                 {/* Logo */}
                 <Flex align="center" gap={2}>
-                    <Box w="8px" h="8px" borderRadius="full" bg="" />
-                    <Box fontFamily="body" fontSize="18px" fontWeight="700" letterSpacing="-0.3px">
+                    {/* <Box w="8px" h="8px" borderRadius="full" bg="" /> */}
+                    {/* <Box fontFamily="body" fontSize="18px" fontWeight="700" letterSpacing="-0.3px">
                         eSpatch
-                    </Box>
+                    </Box> */}
+
+                    <img src="/eSpatch_logo.svg" alt="" width={100} />
                 </Flex>
 
                 {/* Nav links */}
@@ -80,7 +82,7 @@ export default function Header() {
                 {/* Actions */}
                 <HStack gap={3}>
                     <Button size="sm" bg="button" className='btn' color="text" _hover={{ opacity: 0.85 }}>
-                       Partner with Us <IoIosArrowRoundForward />
+                        Partner with Us <IoIosArrowRoundForward />
                     </Button>
                 </HStack>
             </Flex>
