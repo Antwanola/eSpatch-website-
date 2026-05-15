@@ -12,7 +12,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
     return (
-        <Box bg={'footerBg'} borderTop={"0.5px solid"} borderColor={"gray.100"} >
+        <Box bg={'footerBg'} borderColor={"gray.100"} >
             <FooterMargin>
                 <Box borderBottom={'1px solid gray'}>
                     <Flex
@@ -41,9 +41,9 @@ export default function Footer() {
                     gap={{ base: 10, md: 4 }}
                     pb={20}
                 >
-                    <Box width={{ base: '100%', md: '30%', lg: '25%' }}>
+                    <Box width={{ base: '50%', md: '30%', lg: '25%' }}>
                         <img src="/eSpatch_logo.svg" alt="eSpatch Logo" width={150} />
-                        <Text mt={4} textWrap={'wrap'} fontSize={'md'} color={'text'}>
+                        <Text mt={4} textWrap={'wrap'} fontSize={'md'} color={'gray'}>
                             Electric Fleet Delivery-as-a-Service, powering sustainable logistics across Africa.
                         </Text>
                         <Flex mt={6} gap={3}>
