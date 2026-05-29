@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${spaceGrotesk.variable} ${syne.variable} ${dm_sans.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${dm_sans.variable} ${syne.variable} ${dm_sans.variable}`}
       data-theme="light"
     >
       <body suppressHydrationWarning>

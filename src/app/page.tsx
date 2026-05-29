@@ -6,6 +6,7 @@ import Stats from './component/Stats'
 import WhiteCTA from "./component/whiteCTA";
 import Works from "./component/Works";
 import Logistics from "./component/Logistics";
+import ElectrifySection from "./component/ElectrifySection";
 export default function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ export default function Home() {
       <WhiteCTA />
       <Works />
       <Logistics />
+      <ElectrifySection/>
 
     </>
   );

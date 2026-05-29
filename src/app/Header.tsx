@@ -9,8 +9,8 @@ import { useEffect, useRef } from 'react';
 
 const navLinks = [
     // { label: 'Home', href: '/' },
-    { label: 'How it works', href: '/about' },
-    { label: 'Fleet', href: '/work' },
+    { label: 'How it works', href: '/how-it-works' },
+    { label: 'Fleet', href: '/fleet' },
     { label: 'investors', href: '/services' },
     // { label: 'Contact', href: '/contact' },
 ]
