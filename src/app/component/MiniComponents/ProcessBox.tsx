@@ -5,9 +5,10 @@ interface ProcessBoxProps {
     title: string;
     description: string;
     icon: React.ElementType;
+    iconColor?: string;
 }
 
-export default function ProcessBox({ step, title, description, icon }: ProcessBoxProps) {
+export default function ProcessBox({ step, title, description, icon, iconColor }: ProcessBoxProps) {
     return (
         <Box
             p={6}
@@ -17,7 +18,7 @@ export default function ProcessBox({ step, title, description, icon }: ProcessBo
             transition="all 0.3s ease"
             _hover={{ transform: 'translateY(-5px)', bgColor: '#1a3a5a' }}
         >
-            <Box rounded={15} p={3} bgColor={'#0d1b2ad1'} w={'fit-content'} fontSize={24} mb={5} color="#00B4A5">
+            <Box rounded={15} p={3} bgColor={'#0d1b2ad1'} w={'fit-content'} fontSize={24} mb={5} color={`#${iconColor}`}>
                 <Icon as={icon} />
             </Box>
             <Box>

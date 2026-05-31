@@ -5,19 +5,22 @@ import { Box, Flex, HStack, Button, IconButton, Link, useDisclosure, VStack } fr
 import { motion, AnimatePresence } from 'framer-motion'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 
 const navLinks = [
-    // { label: 'Home', href: '/' },
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
     { label: 'How it works', href: '/how-it-works' },
     { label: 'Fleet', href: '/fleet' },
-    { label: 'investors', href: '/services' },
+    { label: 'Technology', href: '/technology' },
     // { label: 'Contact', href: '/contact' },
 ]
 
 export default function Header() {
     const { open, onToggle, onClose } = useDisclosure()
     const headerRef = useRef<HTMLDivElement>(null)
+    const pathname = usePathname()
 
     useEffect(() => {
         const handleResize = () => {
@@ -29,7 +32,6 @@ export default function Header() {
         return () => window.removeEventListener('resize', handleResize)
     }, [open, onClose])
 
-    // Fix 2: Close menu when clicking outside the header
     useEffect(() => {
         if (!open) return
 
@@ -56,27 +58,39 @@ export default function Header() {
             >
                 {/* Logo */}
                 <Flex align="center" gap={2}>
-                    {/* <Box w="8px" h="8px" borderRadius="full" bg="" /> */}
-                    {/* <Box fontFamily="body" fontSize="18px" fontWeight="700" letterSpacing="-0.3px">
-                        eSpatch
-                    </Box> */}
-
                     <img src="/eSpatch_logo.svg" alt="" width={100} />
                 </Flex>
 
                 {/* Nav links */}
                 <HStack gap={8}>
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.label}
-                            href={link.href}
-                            fontSize="14px"
-                            color="text"
-                            _hover={{ color: 'text', textDecoration: 'none' }}
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href
+                        return (
+                            <Link
+                                key={link.label}
+                                href={link.href}
+                                fontSize="14px"
+                                color="text"
+                                position="relative"
+                                pb="4px"
+                                _hover={{ color: 'text', textDecoration: 'none' }}
+                                _after={{
+                                    content: '""',
+                                    position: 'absolute',
+                                    bottom: '-2px',
+                                    left: 0,
+                                    width: isActive ? '100%' : '0%',
+                                    height: '2px',
+                                    background: '#01decb',
+                                    opacity: isActive ? 0.5 : 0,
+                                    borderRadius: '2px',
+                                    transition: 'width 0.2s ease, opacity 0.2s ease',
+                                }}
+                            >
+                                {link.label}
+                            </Link>
+                        )
+                    })}
                 </HStack>
 
                 {/* Actions */}
@@ -147,21 +161,24 @@ export default function Header() {
                             borderColor="border"
                             gap={0}
                         >
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.label}
-                                    href={link.href}
-                                    fontSize="15px"
-                                    color="text"
-                                    py={3}
-                                    borderBottom="0.5px solid"
-                                    borderColor="border"
-                                    _hover={{ color: 'text', textDecoration: 'none' }}
-                                    onClick={onClose}
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href
+                                return (
+                                    <Link
+                                        key={link.label}
+                                        href={link.href}
+                                        fontSize="15px"
+                                        color={isActive ? '#01decb' : 'text'}
+                                        py={3}
+                                        borderBottom="0.5px solid"
+                                        borderColor="border"
+                                        _hover={{ color: 'text', textDecoration: 'none' }}
+                                        onClick={onClose}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                )
+                            })}
                             <VStack pt={3} gap={2}>
                                 <Button w="full" size="lg" bg="button" className='btn' color="text" _hover={{ opacity: 0.85 }}>
                                     Partner with us
