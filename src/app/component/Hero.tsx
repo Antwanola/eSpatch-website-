@@ -162,7 +162,7 @@ const Hero: React.FC = () => {
                 alignItems="center"
                 justifyContent="center"
             >
-                <BikeViewer src="/modelToUse.glb" autoRotate={true} />
+                <BikeViewer src="https://6vurzr5o2pmbrosi.public.blob.vercel-storage.com/modelToUse_textured.glb" autoRotate={true} />
             </Box>
         </Flex>
     );
