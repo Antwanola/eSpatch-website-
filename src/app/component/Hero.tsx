@@ -2,6 +2,7 @@ import { Box, Button, Flex, Text } from '@chakra-ui/react';
 import { MdGpsFixed } from "react-icons/md";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaShieldAlt, FaLeaf, FaFileContract } from "react-icons/fa";
+import BikeViewer from './MiniComponents/BikeViewer';
 import React from 'react';
 
 const ArrowForward = IoIosArrowRoundForward as React.ElementType;
@@ -9,9 +10,9 @@ const ShieldIcon = FaShieldAlt as React.ElementType;
 const LeafIcon = FaLeaf as React.ElementType;
 const ContractIcon = FaFileContract as React.ElementType;
 
-interface Props { }
 
-const Hero: React.FC<Props> = () => {
+
+const Hero: React.FC = () => {
 
     const trustBadges = [
         { icon: <ShieldIcon size={13} />, label: 'Fully Insured' },
@@ -24,14 +25,14 @@ const Hero: React.FC<Props> = () => {
             as='section'
             position={'relative'}
             overflow={'hidden'}
-            bg='#151c34ff'
             h={'auto'}
             justifyContent={'space-between'}
-            p={{ base: 5, md: 10, lg: '30px' }}
+            px={{ base: 4, sm: 6, md: 8, lg: 12 }}
+            py={{ base: 8, md: 10 }}
             gap={{ base: 6, md: 10 }}
             flexDir={{ base: 'column', md: 'row' }}
         >
-            <style>{`
+            <style>{` 
                 @keyframes blink-glow {
                     0%, 100% {
                         opacity: 1;
@@ -57,6 +58,7 @@ const Hero: React.FC<Props> = () => {
                     z-index: 0;
                 }
             `}</style>
+
 
             <div className="hero-radial" />
 
@@ -93,9 +95,10 @@ const Hero: React.FC<Props> = () => {
                     letterSpacing={'tight'}
                     color={'white'}
                     fontWeight={'700'}
-                    lineHeight={'1.05'}
+                    lineHeight={'1.07'}
                     mb={10}
                     mt={10}
+                    fontFamily={'Syne'}
                 >
                     Lagos Deliveries.{' '}
                     <Box color={'text.green'} as={'span'}>Fully Electric.</Box>{' '}
@@ -150,8 +153,17 @@ const Hero: React.FC<Props> = () => {
                     ))}
                 </Flex>
             </Box>
-
-            <Box position={'relative'} zIndex={1}>Box2</Box>
+            <Box
+                position="relative"
+                zIndex={1}
+                flex="1"
+                minW={{ base: '100%', md: '420px' }}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+            >
+                <BikeViewer src="https://6vurzr5o2pmbrosi.public.blob.vercel-storage.com/modelToUse_textured.glb" autoRotate={true} />
+            </Box>
         </Flex>
     );
 };
