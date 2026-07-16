@@ -42,7 +42,7 @@ export default function Footer() {
                     pb={20}
                 >
                     <Box width={{ base: '50%', md: '30%', lg: '25%' }}>
-                        <img src="/vector.png" alt="eSpatch Logo" width={50} />
+                        <img src="https://6vurzr5o2pmbrosi.public.blob.vercel-storage.com/Vector.png" alt="eSpatch Logo" width={50} />
                         <Text mt={4} textWrap={'wrap'} fontSize={'md'} color={'gray'}>
                             Electric Fleet Delivery-as-a-Service, powering sustainable logistics across Africa.
                         </Text>

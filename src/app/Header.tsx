@@ -58,7 +58,7 @@ export default function Header() {
             >
                 {/* Logo */}
                 <Flex align="center" gap={2}>
-                    <img src="/vector.png" alt="" width={50} />
+                    <img src="https://6vurzr5o2pmbrosi.public.blob.vercel-storage.com/Vector.png" alt="" width={50} />
                 </Flex>
 
                 {/* Nav links */}
