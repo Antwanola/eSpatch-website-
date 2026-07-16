@@ -53,8 +53,8 @@ export default function Footer() {
                         </Flex>
                     </Box>
 
-                    <Box width={{ base: '100%', sm: '45%', md: 'auto' }}>
-                        <Heading fontFamily={'Syne'} mt={{ base: 0, md: 8 }} mb={4} fontSize={'lg'}>Quick Links</Heading>
+                    <Box width={{ base: '100%', sm: '45%', md: 'auto' }} >
+                        <Heading fontFamily={'Syne'} mt={{ base: 0, md: 8 }} mb={4} fontSize={'lg'} color={"button"}>Quick Links</Heading>
                         <Flex direction="column" gap={3}>
                             <Link color={'gray'} _hover={{ color: 'button' }} href="#" fontSize={'sm'} display="flex" alignItems="center" gap={2}>
                                 <LiaGreaterThanSolid fontSize={'10px'} color='#00B4A6' /> Partnership Enquiry
@@ -72,7 +72,7 @@ export default function Footer() {
                     </Box>
 
                     <Box width={{ base: '100%', sm: '45%', md: 'auto' }}>
-                        <Heading fontFamily={'Syne'} mt={{ base: 0, md: 8 }} mb={4} fontSize={'lg'}>Legal</Heading>
+                        <Heading fontFamily={'Syne'} mt={{ base: 0, md: 8 }} mb={4} fontSize={'lg'} color={"button"}>Legal</Heading>
                         <Flex direction="column" gap={3}>
                             <Link color={'gray'} _hover={{ color: 'button' }} href="#" fontSize={'sm'} display="flex" alignItems="center" gap={2}>
                                 <LiaGreaterThanSolid fontSize={'10px'} color='#00B4A6' /> Privacy Policy
@@ -87,7 +87,7 @@ export default function Footer() {
                     </Box>
 
                     <Box width={{ base: '100%', sm: '100%', md: 'auto' }}>
-                        <Heading fontFamily={'Syne'} mt={{ base: 0, md: 8 }} mb={4} fontSize={'lg'}>Location</Heading>
+                        <Heading fontFamily={'Syne'} mt={{ base: 0, md: 8 }} mb={4} fontSize={'lg'} color={"button"}>Location</Heading>
                         <Flex direction="column" gap={3}>
                             <Link color={'gray'} _hover={{ color: 'button' }} href="#" fontSize={'sm'} display="flex" alignItems="start" gap={2}>
                                 <MdAddLocationAlt fontSize={'16px'} color='#00B4A6' /> Lagos Island Corridor.<br /> Lagos, Nigeria.
