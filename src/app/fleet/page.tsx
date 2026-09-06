@@ -164,7 +164,7 @@ const FleetPage: React.FC = () => {
                                 bg="#0a1628" minH={{ base: '240px', md: '300px' }} maxH={{ base: '320px', md: '360px' }}
                                 display="flex" alignItems="center" justifyContent="center">
                                 <BikeViewer
-                                    src="/bike-optimized2.glb"
+                                    src="https://6vurzr5o2pmbrosi.public.blob.vercel-storage.com/bike-optimized2.glb"
                                     autoRotate={false}
                                     height={{ base: '240px', md: '320px' }}
                                     showControls={false}
