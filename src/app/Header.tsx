@@ -97,9 +97,11 @@ export default function Header() {
 
                 {/* Actions */}
                 <HStack gap={3}>
-                    <Button size="sm" bg="button" color="bg" fontWeight={'600'} _hover={{ opacity: 0.85 }}>
-                        Partner with Us <IoIosArrowRoundForward />
-                    </Button>
+                    <Link href="/contact#partner-form">
+                        <Button size="sm" bg="button" color="bg" fontWeight={'600'} _hover={{ opacity: 0.85 }}>
+                            Partner with Us <IoIosArrowRoundForward />
+                        </Button>
+                    </Link>
                 </HStack>
             </Flex>
 
