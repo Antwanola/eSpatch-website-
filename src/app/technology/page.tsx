@@ -293,12 +293,12 @@ const ForiTechPage: React.FC = () => {
                                 px={3} py={1}>
                                 <Box w="6px" h="6px" borderRadius="full" bg="#01decb" />
                                 <Text color="#12635c" fontSize="10px" letterSpacing="wider" fontWeight={600}>
-                                    aDryv by Forti Technologies
+                                    aDryv by Folti Technologies
                                 </Text>
                             </Flex>
 
                             <Text fontFamily="'DM Sans', sans-serif" fontWeight={600}
-                                fontSize={{ base: '1.6rem', md: '2rem', lg: '2.4rem' }}
+                                fontSize={{ base: '.6rem', md: '1rem', lg: '1.4rem' }}
                                 color="#0D1B2A" lineHeight={1.2} mb={4}>
                                 A comprehensive fleet{' '}
                                 <Box as="span" color="#12635c">management</Box>{' '}

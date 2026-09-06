@@ -10,6 +10,8 @@ interface BikeViewerProps {
     poster?: string;          // optional placeholder image while model loads
     alt?: string;
     autoRotate?: boolean;
+    height?: any;
+    showControls?: boolean;
 }
 
 const ModelViewerTag = 'model-viewer' as any;
@@ -19,6 +21,8 @@ const BikeViewer: React.FC<BikeViewerProps> = ({
     poster,
     alt = 'eSpatch electric delivery motorcycle',
     autoRotate = true,
+    height,
+    showControls = true,
 }) => {
     const mvRef = useRef<HTMLElement & Record<string, any>>(null);
     const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -108,36 +112,38 @@ const BikeViewer: React.FC<BikeViewerProps> = ({
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            py={8}
+            py={height ? 2 : 8}
             userSelect="none"
         >
             {/* Orbit angle badge */}
-            <Box
-                position="absolute"
-                top={3}
-                right={4}
-                fontSize="11px"
-                fontWeight="500"
-                color="whiteAlpha.600"
-                bg="whiteAlpha.100"
-                border="0.5px solid"
-                borderColor="whiteAlpha.200"
-                borderRadius="8px"
-                px={2}
-                py="2px"
-                letterSpacing="wider"
-                minW="52px"
-                textAlign="center"
-                zIndex={2}
-            >
-                {orbitDeg}°
-            </Box>
+            {showControls && (
+                <Box
+                    position="absolute"
+                    top={3}
+                    right={4}
+                    fontSize="11px"
+                    fontWeight="500"
+                    color="whiteAlpha.600"
+                    bg="whiteAlpha.100"
+                    border="0.5px solid"
+                    borderColor="whiteAlpha.200"
+                    borderRadius="8px"
+                    px={2}
+                    py="2px"
+                    letterSpacing="wider"
+                    minW="52px"
+                    textAlign="center"
+                    zIndex={2}
+                >
+                    {orbitDeg}°
+                </Box>
+            )}
 
             {/* Model viewer */}
             <Box
                 w="100%"
                 maxW={{ base: '100%', md: '900px' }}
-                h={{ base: '420px', md: '600px', lg: '680px' }}
+                h={height || { base: '420px', md: '600px', lg: '680px' }}
                 position="relative"
                 opacity={loaded ? 1 : 0}
                 transition="opacity 0.3s"
@@ -181,92 +187,96 @@ const BikeViewer: React.FC<BikeViewerProps> = ({
                 </Box>
             )}
 
-            {/* Drag hint */}
-            <Flex
-                align="center"
-                gap={2}
-                mt={8}
-                fontSize="xs"
-                color="whiteAlpha.400"
-                letterSpacing="wide"
-                opacity={hintVisible ? 1 : 0}
-                transition="opacity 0.4s"
-                pointerEvents="none"
-            >
-                <Box as="span" fontSize="14px">⟷</Box>
-                <Text>{isAutoSpinning ? 'Auto-rotating · drag to control' : 'Drag to rotate'}</Text>
-            </Flex>
+            {showControls && (
+                <>
+                    {/* Drag hint */}
+                    <Flex
+                        align="center"
+                        gap={2}
+                        mt={8}
+                        fontSize="xs"
+                        color="whiteAlpha.400"
+                        letterSpacing="wide"
+                        opacity={hintVisible ? 1 : 0}
+                        transition="opacity 0.4s"
+                        pointerEvents="none"
+                    >
+                        <Box as="span" fontSize="14px">⟷</Box>
+                        <Text>{isAutoSpinning ? 'Auto-rotating · drag to control' : 'Drag to rotate'}</Text>
+                    </Flex>
 
-            {/* Load progress scrubber */}
-            <Box
-                mt={4}
-                w="75%"
-                maxW="380px"
-                h="2px"
-                bg="whiteAlpha.100"
-                borderRadius="2px"
-                position="relative"
-            >
-                <Box
-                    position="absolute"
-                    top="0"
-                    left="0"
-                    h="100%"
-                    bg="whiteAlpha.300"
-                    borderRadius="2px"
-                    width={`${progress}%`}
-                    transition="width 0.2s"
-                />
-                <Box
-                    position="absolute"
-                    top="50%"
-                    w="10px"
-                    h="10px"
-                    bg="white"
-                    borderRadius="50%"
-                    left={`${progress}%`}
-                    transform="translate(-50%, -50%)"
-                    boxShadow="0 0 6px rgba(1,222,203,0.5)"
-                />
-            </Box>
+                    {/* Load progress scrubber */}
+                    <Box
+                        mt={4}
+                        w="75%"
+                        maxW="380px"
+                        h="2px"
+                        bg="whiteAlpha.100"
+                        borderRadius="2px"
+                        position="relative"
+                    >
+                        <Box
+                            position="absolute"
+                            top="0"
+                            left="0"
+                            h="100%"
+                            bg="whiteAlpha.300"
+                            borderRadius="2px"
+                            width={`${progress}%`}
+                            transition="width 0.2s"
+                        />
+                        <Box
+                            position="absolute"
+                            top="50%"
+                            w="10px"
+                            h="10px"
+                            bg="white"
+                            borderRadius="50%"
+                            left={`${progress}%`}
+                            transform="translate(-50%, -50%)"
+                            boxShadow="0 0 6px rgba(1,222,203,0.5)"
+                        />
+                    </Box>
 
-            {/* Controls */}
-            <Flex gap={2} mt={4}>
-                <Box
-                    as="button"
-                    fontSize="11px"
-                    color="whiteAlpha.400"
-                    bg="transparent"
-                    border="0.5px solid"
-                    borderColor="whiteAlpha.200"
-                    borderRadius="8px"
-                    px={3}
-                    py={1}
-                    cursor="pointer"
-                    letterSpacing="wider"
-                    _hover={{ color: 'whiteAlpha.700', borderColor: 'whiteAlpha.400' }}
-                    onClick={resetCamera}
-                >
-                    RESET
-                </Box>
-                <Box
-                    as="button"
-                    fontSize="11px"
-                    color={isAutoSpinning ? '#01decb' : 'whiteAlpha.400'}
-                    bg={isAutoSpinning ? 'rgba(1,222,203,0.08)' : 'transparent'}
-                    border="0.5px solid"
-                    borderColor={isAutoSpinning ? 'rgba(1,222,203,0.35)' : 'whiteAlpha.200'}
-                    borderRadius="8px"
-                    px={3}
-                    py={1}
-                    cursor="pointer"
-                    letterSpacing="wider"
-                    _hover={{ color: '#01decb', borderColor: 'rgba(1,222,203,0.35)' }}
-                    onClick={() => (isAutoSpinning ? stopAutoRotate() : startAutoRotate())}
-                >
-                    {isAutoSpinning ? '⏸ AUTO' : '▶ AUTO'}
-                </Box>
-            </Flex>
+                    {/* Controls */}
+                    <Flex gap={2} mt={4}>
+                        <Box
+                            as="button"
+                            fontSize="11px"
+                            color="whiteAlpha.400"
+                            bg="transparent"
+                            border="0.5px solid"
+                            borderColor="whiteAlpha.200"
+                            borderRadius="8px"
+                            px={3}
+                            py={1}
+                            cursor="pointer"
+                            letterSpacing="wider"
+                            _hover={{ color: 'whiteAlpha.700', borderColor: 'whiteAlpha.400' }}
+                            onClick={resetCamera}
+                        >
+                            RESET
+                        </Box>
+                        <Box
+                            as="button"
+                            fontSize="11px"
+                            color={isAutoSpinning ? '#01decb' : 'whiteAlpha.400'}
+                            bg={isAutoSpinning ? 'rgba(1,222,203,0.08)' : 'transparent'}
+                            border="0.5px solid"
+                            borderColor={isAutoSpinning ? 'rgba(1,222,203,0.35)' : 'whiteAlpha.200'}
+                            borderRadius="8px"
+                            px={3}
+                            py={1}
+                            cursor="pointer"
+                            letterSpacing="wider"
+                            _hover={{ color: '#01decb', borderColor: 'rgba(1,222,203,0.35)' }}
+                            onClick={() => (isAutoSpinning ? stopAutoRotate() : startAutoRotate())}
+                        >
+                            {isAutoSpinning ? '⏸ AUTO' : '▶ AUTO'}
+                        </Box>
+                    </Flex>
+                </>
+            )}
         </Box>
     );
 };

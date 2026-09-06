@@ -2,6 +2,7 @@
 import { Box, Button, Flex, Grid, Text } from '@chakra-ui/react';
 import React from 'react';
 import MainMargin from '../component/MarginGuides/MianMargin';
+import BikeViewer from '../component/MiniComponents/BikeViewer';
 import { MdGpsFixed, MdElectricMoped, MdBolt } from 'react-icons/md';
 import { TbBatteryCharging, TbRoute, TbTool } from 'react-icons/tb';
 import { RiMotorbikeFill } from 'react-icons/ri';
@@ -155,19 +156,21 @@ const FleetPage: React.FC = () => {
                             </Flex>
                         </Box>
 
-                        {/* Right: bike image card */}
-                        <Box w={{ base: '100%', md: '50%' }} position="relative">
-                            <Box borderRadius="2xl" overflow="hidden"
+                        {/* Right: 3D bike viewer card */}
+                        <Box w={{ base: '100%', md: '50%' }} position="relative" alignSelf="stretch" display="flex" flexDirection="column">
+                            <Box borderRadius="2xl" overflow="hidden" flex="1"
                                 border="1px solid" borderColor="rgba(1,222,203,0.2)"
-                                bg="#0a1628" minH={{ base: '220px', md: '320px' }}
+                                bg="#0a1628" minH={{ base: '240px', md: '300px' }} maxH={{ base: '320px', md: '360px' }}
                                 display="flex" alignItems="center" justifyContent="center">
-                                <img src="/bike.png" alt="eSpatch electric bike"
-                                    style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                <BikeViewer
+                                    src="/bike-optimized2.glb"
+                                    autoRotate={false}
+                                    height={{ base: '240px', md: '320px' }}
+                                    showControls={false}
                                 />
                             </Box>
                             {/* Floating stat chip */}
-                            <Box position="absolute" bottom={4} left={4}
+                            <Box position="absolute" bottom={4} left={4} zIndex={2}
                                 bg="rgba(10,22,40,0.92)" backdropFilter="blur(8px)"
                                 border="1px solid" borderColor="#01decb33"
                                 borderRadius="xl" px={4} py={3}>
@@ -486,9 +489,18 @@ const FleetPage: React.FC = () => {
                             minH="300px" position="relative"
                             transition="border-color 0.2s, transform 0.2s"
                             _hover={{ borderColor: '#01decb33', transform: 'translateY(-4px)' }}>
-                            <img src="/bike.png" alt="Bikes assembled in Lagos"
+                            <img src="/assembly.jpg" alt="Bikes assembled in Lagos"
                                 style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
                                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                            />
+                            <Box
+                                position="absolute"
+                                top={0}
+                                left={0}
+                                right={0}
+                                bottom={0}
+                                bgGradient="linear(to-t, #0a1628 0%, rgba(10, 22, 40, 0.45) 60%, rgba(10, 22, 40, 0.15) 100%)"
+                                pointerEvents="none"
                             />
                         </Box>
                     </Grid>
@@ -517,9 +529,9 @@ const FleetPage: React.FC = () => {
                         Join leading platforms trusting eSpatch for reliable,
                         liability-free B2B fulfilment.
                     </Text>
-                    <Button fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize="md"
+                    <Button as="a" href="/contact#contact-form" fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize="md"
                         bg="white" color="#0D1B2A" px={8} py={6} borderRadius="full"
-                        _hover={{ bg: '#01decb', color: 'white', transform: 'translateY(-2px)', boxShadow: '0 8px 30px rgba(1,222,203,0.25)' }}
+                        _hover={{ bg: '#01decb', color: 'white', transform: 'translateY(-2px)', boxShadow: '0 8px 30px rgba(1,222,203,0.25)', cursor: 'pointer' }}
                         transition="all 0.2s">
                         Get in Touch →
                     </Button>

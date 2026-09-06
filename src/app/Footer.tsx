@@ -26,7 +26,10 @@ export default function Footer() {
                             <FaLeaf color='#00B4A6' />
                             SDG 11 & 13 Aligned
                         </Flex>
-                        <Button bgColor={'button'} borderRadius={'lg'} size={{ base: 'md', md: 'lg' }} w={{ base: 'full', sm: 'auto' }}>
+                        <Button
+                            as="a"
+                            href="/contact#contact-form"
+                            bgColor={'button'} borderRadius={'lg'} size={{ base: 'md', md: 'lg' }} w={{ base: 'full', sm: 'auto' }}>
                             Start a partnership <span><IoIosArrowRoundForward /></span>
                         </Button>
                     </Flex>

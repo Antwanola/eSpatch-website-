@@ -15,6 +15,8 @@ const navLinks = [
     { label: 'Fleet', href: '/fleet' },
     { label: 'Technology', href: '/technology' },
     { label: 'Investors', href: '/investors' },
+    { label: 'Contact Us', href: '/contact' },
+    { label: 'Careers', href: '/career' }
 ]
 
 export default function Header() {
