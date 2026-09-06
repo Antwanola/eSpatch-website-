@@ -11,6 +11,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 // Icon components (inline SVG to avoid extra deps)
 const ShieldIcon = () => (
@@ -132,28 +133,30 @@ export default function ElectrifySection() {
 
           {/* CTA Buttons */}
           <HStack gap={4} flexWrap="wrap" justify="center" mt={2}>
-            <Button
-              size="lg"
-              bg="rgba(0,200,170,0.9)"
-              color="white"
-              fontWeight="700"
-              fontSize="15px"
-              px={7}
-              py={6}
-              borderRadius="md"
-              _hover={{
-                bg: "rgba(0,220,190,1)",
-                transform: "translateY(-1px)",
-                boxShadow: "0 8px 30px rgba(0,200,170,0.4)",
-              }}
-              _active={{ transform: "translateY(0)" }}
-              transition="all 0.2s ease"
-            >
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-                Partner with Us
-                <ArrowRightIcon />
-              </span>
-            </Button>
+            <Link href="/contact#partner-form">
+              <Button
+                size="lg"
+                bg="rgba(0,200,170,0.9)"
+                color="white"
+                fontWeight="700"
+                fontSize="15px"
+                px={7}
+                py={6}
+                borderRadius="md"
+                _hover={{
+                  bg: "rgba(0,220,190,1)",
+                  transform: "translateY(-1px)",
+                  boxShadow: "0 8px 30px rgba(0,200,170,0.4)",
+                }}
+                _active={{ transform: "translateY(0)" }}
+                transition="all 0.2s ease"
+              >
+                <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                  Partner with Us
+                  <ArrowRightIcon />
+                </span>
+              </Button>
+            </Link>
 
             <Button
               size="lg"

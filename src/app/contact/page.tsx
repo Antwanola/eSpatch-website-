@@ -371,7 +371,7 @@ export default function ContactPage() {
                 PARTNERSHIP FORM
             ===================== */}
             <Box
-              id="contact-form"
+              id="partner-form"
               bg="white"
               borderRadius="12px"
               p={{

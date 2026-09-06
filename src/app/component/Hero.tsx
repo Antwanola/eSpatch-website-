@@ -3,6 +3,7 @@ import { MdGpsFixed } from "react-icons/md";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaShieldAlt, FaLeaf, FaFileContract } from "react-icons/fa";
 import BikeViewer from './MiniComponents/BikeViewer';
+import Link from 'next/link';
 import React from 'react';
 
 const ArrowForward = IoIosArrowRoundForward as React.ElementType;
@@ -116,9 +117,11 @@ const Hero: React.FC = () => {
                 </Text>
 
                 <Flex gap={{ base: 4, md: 10 }} flexDir={{ base: 'column', sm: 'row' }}>
-                    <Button as='button' className='btn' mt={10} bg={'button'} borderRadius={10} color={'bg'} size={'lg'}>
-                        Partner with us <ArrowForward />
-                    </Button>
+                    <Link href="/contact#partner-form">
+                        <Button as='button' className='btn' mt={10} bg={'button'} borderRadius={10} color={'bg'} size={'lg'}>
+                            Partner with us <ArrowForward />
+                        </Button>
+                    </Link>
                     <Button as='button' mt={10} borderRadius={10} bg={'transparent'} border={'0.5px solid'} borderColor={'text'} size={'lg'}>
                         Learn more <ArrowForward />
                     </Button>

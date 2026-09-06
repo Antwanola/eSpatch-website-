@@ -272,13 +272,10 @@ export default function RiderRecruitmentPage() {
                                 ml={{ base: 0, md: "auto" }}
                             >
                                 {/* Replace with the real rider photo asset */}
-                                <Box
-                                    as="img"
+                                <img
                                     src="/rider2.jpeg"
                                     alt="eSpatch rider on an electric delivery motorcycle"
-                                    w="full"
-                                    h="full"
-                                    objectFit="cover"
+                                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                 />
                             </Box>
 
@@ -531,30 +528,27 @@ export default function RiderRecruitmentPage() {
                                             onChange={handleCvChange}
                                             id="cv-upload"
                                         />
-                                        {/* Styled upload trigger */}
-                                        <Box
-                                            as="label"
+                                        <label
                                             htmlFor="cv-upload"
-                                            display="flex"
-                                            flexDirection="column"
-                                            alignItems="center"
-                                            justifyContent="center"
-                                            gap={1}
-                                            bg={cvFile ? "rgba(1,222,203,0.08)" : colors.slateBg}
-                                            border={cvFile ? "1.5px solid" : "1.5px dashed"}
-                                            borderColor={cvFile ? colors.teal : "#cdd8e3"}
-                                            borderRadius="md"
-                                            px={3}
-                                            py={3}
-                                            cursor="pointer"
-                                            transition="all 0.2s"
-                                            _hover={{ borderColor: colors.teal, bg: "rgba(1,222,203,0.06)" }}
-                                            minH="56px"
+                                            style={{
+                                                display: "flex",
+                                                flexDirection: "column",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                gap: "4px",
+                                                background: cvFile ? "rgba(1,222,203,0.08)" : colors.slateBg,
+                                                border: cvFile ? `1.5px solid ${colors.teal}` : "1.5px dashed #cdd8e3",
+                                                borderRadius: "6px",
+                                                padding: "12px",
+                                                cursor: "pointer",
+                                                minHeight: "56px",
+                                                transition: "all 0.2s",
+                                            }}
                                         >
                                             {cvFile ? (
                                                 <>
                                                     <Text fontSize="xl" lineHeight={1}>📄</Text>
-                                                    <Text fontSize="2xs" color={colors.teal} fontWeight="600" textAlign="center" noOfLines={1}>{cvFile.name}</Text>
+                                                    <Text fontSize="2xs" color={colors.teal} fontWeight="600" textAlign="center" lineClamp={1}>{cvFile.name}</Text>
                                                     <Text fontSize="2xs" color={colors.bodyGray}>{(cvFile.size / 1024).toFixed(0)} KB</Text>
                                                 </>
                                             ) : (
@@ -563,7 +557,7 @@ export default function RiderRecruitmentPage() {
                                                     <Text fontSize="2xs" color={colors.bodyGray} textAlign="center">PDF / DOCX · max 5 MB</Text>
                                                 </>
                                             )}
-                                        </Box>
+                                        </label>
                                         {cvError && (
                                             <Text fontSize="2xs" color="red.500" mt={1}>{cvError}</Text>
                                         )}
