@@ -1,5 +1,6 @@
 'use client';
 import { Box, Button, Flex, Grid, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 import MainMargin from '../component/MarginGuides/MianMargin';
 import BikeViewer from '../component/MiniComponents/BikeViewer';
@@ -529,12 +530,14 @@ const FleetPage: React.FC = () => {
                         Join leading platforms trusting eSpatch for reliable,
                         liability-free B2B fulfilment.
                     </Text>
-                    <Button as="a" href="/contact#contact-form" fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize="md"
-                        bg="white" color="#0D1B2A" px={8} py={6} borderRadius="full"
-                        _hover={{ bg: '#01decb', color: 'white', transform: 'translateY(-2px)', boxShadow: '0 8px 30px rgba(1,222,203,0.25)', cursor: 'pointer' }}
-                        transition="all 0.2s">
-                        Get in Touch →
-                    </Button>
+                    <Link href="/contact#partner-form" style={{ textDecoration: 'none' }}>
+                        <Button fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize="md"
+                            bg="white" color="#0D1B2A" px={8} py={6} borderRadius="full"
+                            _hover={{ bg: '#01decb', color: 'white', transform: 'translateY(-2px)', boxShadow: '0 8px 30px rgba(1,222,203,0.25)', cursor: 'pointer' }}
+                            transition="all 0.2s">
+                            Get in Touch →
+                        </Button>
+                    </Link>
                 </Box>
             </Box>
         </Box>

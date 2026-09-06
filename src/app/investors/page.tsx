@@ -14,6 +14,7 @@ import {
     SimpleGrid,
     Image,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
@@ -372,27 +373,27 @@ export default function InvestorsPage() {
                                     >
                                         View Investor Deck
                                     </Button>
-                                    <Button
-                                        as='a'
-                                        bg="transparent"
-                                        border="1px solid"
-                                        borderColor={NAVY_BORDER}
-                                        color="rgba(255,255,255,0.7)"
-                                        fontFamily="'Syne', sans-serif"
-                                        fontWeight={600}
-                                        fontSize="13px"
-                                        px={7}
-                                        h="44px"
-                                        borderRadius="10px"
-                                        _hover={{ borderColor: TEAL, color: TEAL }}
-                                        transition="all 0.2s"
-                                        href="/how-it-works"
-                                    >
-                                        <HStack gap={2}>
-                                            <Text>How it Works</Text>
-                                            <FiArrowRight size={14} />
-                                        </HStack>
-                                    </Button>
+                                    <Link href="/how-it-works" style={{ textDecoration: 'none' }}>
+                                        <Button
+                                            bg="transparent"
+                                            border="1px solid"
+                                            borderColor={NAVY_BORDER}
+                                            color="rgba(255,255,255,0.7)"
+                                            fontFamily="'Syne', sans-serif"
+                                            fontWeight={600}
+                                            fontSize="13px"
+                                            px={7}
+                                            h="44px"
+                                            borderRadius="10px"
+                                            _hover={{ borderColor: TEAL, color: TEAL }}
+                                            transition="all 0.2s"
+                                        >
+                                            <HStack gap={2}>
+                                                <Text>How it Works</Text>
+                                                <FiArrowRight size={14} />
+                                            </HStack>
+                                        </Button>
+                                    </Link>
                                 </HStack>
                             </FadeIn>
                         </Box>

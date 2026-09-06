@@ -11,6 +11,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 // Icon components (inline SVG to avoid extra deps)
 const ShieldIcon = () => (

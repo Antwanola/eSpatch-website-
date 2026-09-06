@@ -3,6 +3,7 @@ import { MdGpsFixed } from "react-icons/md";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaShieldAlt, FaLeaf, FaFileContract } from "react-icons/fa";
 import BikeViewer from './MiniComponents/BikeViewer';
+import Link from 'next/link';
 import React from 'react';
 
 const ArrowForward = IoIosArrowRoundForward as React.ElementType;
