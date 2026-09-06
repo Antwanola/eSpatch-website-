@@ -170,21 +170,32 @@ const HowItWorks: React.FC = () => {
               fontSize={{ base: 'md', md: 'lg' }} fontWeight={400} lineHeight={1.7} maxW="420px">
               A seamless B2B logistics model designed for scale, reliability, and operational excellence.
             </Text>
-            <Button borderRadius={10} bg="#167c5729" color="#01decb" border="1px solid"
+            <Button
+              as="a"
+              href="#our-process"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('our-process')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              borderRadius={10} bg="#167c5729" color="#01decb" border="1px solid"
               borderColor="#01decb44" px={6} py={5} fontSize="sm" fontFamily="'DM Sans', sans-serif"
-              _hover={{ bg: '#01decb22' }} transition="background 0.2s">
+              _hover={{ bg: '#01decb22', cursor: 'pointer' }} transition="background 0.2s">
               View Process
             </Button>
           </Box>
           <Box w={{ base: '100%', md: '48%' }} borderRadius="2xl" overflow="hidden" flexShrink={0}>
-            <img src="/it-works.png" alt="How eSpatch works"
-              style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }} />
+            <picture>
+              <source media="(min-width: 48em)" srcSet="/dispatch-flow.png" />
+              <img src="/dispatch-flow-mobile.png"
+                alt="Diagram of the eSpatch dispatch flow: an order arrives from the partner platform, the dispatch engine matches the nearest vetted rider, the rider completes the GPS-tracked last-mile delivery, and the partner receives a reconciled weekly settlement"
+                style={{ display: 'block', width: '100%', height: 'auto' }} />
+            </picture>
           </Box>
         </Flex>
       </MainMargin>
 
       {/* ── Section 2: Our Process ── */}
-      <Box bg="#ffffffff" py={{ base: 14, md: 20 }} px={{ base: 4, md: 10 }}>
+      <Box id="our-process" bg="#ffffffff" py={{ base: 14, md: 20 }} px={{ base: 4, md: 10 }}>
         <MainMargin>
           <Box textAlign="center" mb={{ base: 10, md: 14 }}>
             <Heading color="#0D1B2A" fontFamily="'Syne', sans-serif"
@@ -513,6 +524,8 @@ const HowItWorks: React.FC = () => {
           </Text>
 
           <Button
+            as="a"
+            href="/contact#contact-form"
             fontFamily="'DM Sans', sans-serif"
             fontWeight={600}
             fontSize="md"
@@ -526,6 +539,7 @@ const HowItWorks: React.FC = () => {
               color: 'white',
               transform: 'translateY(-2px)',
               boxShadow: '0 8px 30px rgba(1,222,203,0.25)',
+              cursor: 'pointer',
             }}
             transition="all 0.2s"
           >

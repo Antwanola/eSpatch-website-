@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16283D"/>
+      <stop offset="1" stop-color="#0F1E30"/>
+    </linearGradient>
+    <linearGradient id="engineGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A3048"/>
+      <stop offset="1" stop-color="#101F33"/>
+    </linearGradient>
+    <radialGradient id="hubGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#01decb" stop-opacity="0.26"/>
+      <stop offset="0.55" stop-color="#01decb" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#01decb" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hubBody" cx="0.5" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#17334A"/>
+      <stop offset="1" stop-color="#0E1F32"/>
+    </radialGradient>
+    <pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.5" fill="#01decb" fill-opacity="0.13"/>
+    </pattern>
+    <pattern id="minidots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#01decb" fill-opacity="0.18"/>
+    </pattern>
+    <marker id="arw" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#01decb" fill-opacity="0.9"/>
+    </marker>
+    <filter id="soft" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="900" fill="#0D1B2A"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.032" stroke-width="18" stroke-linecap="round">
+    <path d="M-20 232 L1020 196"/>
+    <path d="M-20 640 L1020 684"/>
+    <path d="M268 -20 L212 920"/>
+    <path d="M778 -20 L836 920"/>
+  </g>
+  <rect width="1000" height="900" fill="url(#dots)"/>
+  <rect x="-40" y="120" width="660" height="660" fill="url(#hubGlow)"/>
+
+  <!-- live badge -->
+  <rect x="56" y="24" width="278" height="40" rx="20" fill="#00867b" fill-opacity="0.22" stroke="#01decb" stroke-opacity="0.35"/>
+  <circle cx="82" cy="44" r="5" fill="#01decb" filter="url(#soft)"/>
+  <circle cx="82" cy="44" r="5" fill="#01decb"/>
+  <text x="100" y="50" font-size="15" letter-spacing="1.6" fill="#01decb">LIVE DISPATCH NETWORK</text>
+
+  <!-- step 01 -->
+  <rect x="56" y="88" width="888" height="120" rx="20" fill="url(#cardGrad)" stroke="#01decb" stroke-opacity="0.20" stroke-width="1.5"/>
+  <circle cx="116" cy="148" r="30" fill="#01decb" fill-opacity="0.10" stroke="#01decb" stroke-opacity="0.30"/>
+  <g transform="translate(116,148)" stroke="#01decb" stroke-width="2.4" fill="#01decb" fill-opacity="0.12" stroke-linejoin="round">
+    <path d="M-15 -6 L0 -14 L15 -6 L15 10 L0 18 L-15 10 Z"/>
+    <path d="M-15 -6 L0 2 L15 -6" fill="none"/><path d="M0 2 L0 18" fill="none"/>
+  </g>
+  <text x="172" y="142" font-size="28" font-weight="700" fill="#FFFFFF">Order Received</text>
+  <text x="172" y="174" font-size="20" fill="#93A3B4">Straight from your platform, over our API</text>
+  <circle cx="898" cy="148" r="20" fill="#7c6af7" fill-opacity="0.16" stroke="#7c6af7" stroke-opacity="0.5"/>
+  <text x="898" y="155" font-size="15" font-weight="700" fill="#b3a8ff" text-anchor="middle">01</text>
+
+  <path d="M500 208 L500 244" fill="none" stroke="#01decb" stroke-opacity="0.5" stroke-width="2.6" marker-end="url(#arw)"/>
+  <text x="524" y="233" font-size="16" letter-spacing="2" fill="#63798D">VIA API</text>
+
+  <!-- step 02 : the engine -->
+  <rect x="56" y="246" width="888" height="214" rx="22" fill="url(#engineGrad)" stroke="#7c6af7" stroke-opacity="0.38" stroke-width="1.8"/>
+  <g fill="none" stroke="#01decb" stroke-dasharray="4 10">
+    <circle cx="168" cy="353" r="94" stroke-opacity="0.10"/>
+    <circle cx="168" cy="353" r="76" stroke-opacity="0.20"/>
+  </g>
+  <circle cx="168" cy="353" r="58" fill="url(#hubBody)" stroke="#01decb" stroke-opacity="0.55" stroke-width="2"/>
+  <g transform="translate(168,353)">
+    <g stroke="#01decb" stroke-opacity="0.55" stroke-width="1.8">
+      <path d="M0 0 L-24 -13"/><path d="M0 0 L24 -13"/><path d="M0 0 L-21 16"/><path d="M0 0 L21 16"/>
+    </g>
+    <circle cx="0" cy="0" r="7" fill="#01decb"/>
+    <g fill="#0D1B2A" stroke="#01decb" stroke-width="2">
+      <circle cx="-24" cy="-13" r="4.5"/><circle cx="24" cy="-13" r="4.5"/>
+      <circle cx="-21" cy="16" r="4.5"/><circle cx="21" cy="16" r="4.5"/>
+    </g>
+  </g>
+  <text x="290" y="312" font-size="15" letter-spacing="3" fill="#a094ff">eSPATCH ENGINE</text>
+  <text x="290" y="352" font-size="30" font-weight="700" fill="#01decb">Smart Dispatch</text>
+  <text x="290" y="386" font-size="20" fill="#93A3B4">Matches the nearest vetted rider</text>
+  <text x="290" y="414" font-size="20" fill="#93A3B4">and routes the run in seconds.</text>
+  <circle cx="898" cy="278" r="20" fill="#7c6af7" fill-opacity="0.16" stroke="#7c6af7" stroke-opacity="0.5"/>
+  <text x="898" y="285" font-size="15" font-weight="700" fill="#b3a8ff" text-anchor="middle">02</text>
+
+  <!-- mini route map inside the engine panel -->
+  <rect x="686" y="316" width="196" height="126" rx="12" fill="#0A1727" stroke="#01decb" stroke-opacity="0.16"/>
+  <rect x="686" y="316" width="196" height="126" rx="12" fill="url(#minidots)"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="6">
+    <path d="M732 316 L732 442"/><path d="M820 316 L820 442"/><path d="M686 386 L882 386"/>
+  </g>
+  <path d="M712 424 L756 424 L756 386 L820 386 L820 344" fill="none" stroke="#01decb" stroke-opacity="0.85" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="712" cy="424" r="5.5" fill="#01decb"/>
+  <g transform="translate(820,336)" stroke="#7c6af7" stroke-width="2.2" fill="#7c6af7" fill-opacity="0.25" stroke-linejoin="round">
+    <path d="M0 8 C0 8 -8 -1 -8 -5 A8 8 0 1 1 8 -5 C8 -1 0 8 0 8 Z"/>
+  </g>
+
+  <path d="M500 460 L500 496" fill="none" stroke="#01decb" stroke-opacity="0.5" stroke-width="2.6" marker-end="url(#arw)"/>
+  <text x="524" y="485" font-size="16" letter-spacing="2" fill="#63798D">RIDER ASSIGNED</text>
+
+  <!-- step 03 -->
+  <rect x="56" y="498" width="888" height="120" rx="20" fill="url(#cardGrad)" stroke="#01decb" stroke-opacity="0.20" stroke-width="1.5"/>
+  <circle cx="116" cy="558" r="30" fill="#01decb" fill-opacity="0.10" stroke="#01decb" stroke-opacity="0.30"/>
+  <g transform="translate(116,558)" stroke="#01decb" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="-13" cy="8" r="7.5"/><circle cx="13" cy="8" r="7.5"/>
+    <path d="M-13 8 L-8 0 L3 0 L9 -6"/>
+    <path d="M-10 -2 L-3 -8 L4 -8 L5 0 Z" fill="#01decb" fill-opacity="0.22"/>
+    <path d="M9 -6 L13 -12 L18 -12"/>
+    <path d="M9 -6 L13 8"/>
+  </g>
+  <text x="172" y="552" font-size="28" font-weight="700" fill="#FFFFFF">Last-Mile Delivery</text>
+  <text x="172" y="584" font-size="20" fill="#93A3B4">Live GPS from pickup to the customer door</text>
+  <circle cx="898" cy="558" r="20" fill="#7c6af7" fill-opacity="0.16" stroke="#7c6af7" stroke-opacity="0.5"/>
+  <text x="898" y="565" font-size="15" font-weight="700" fill="#b3a8ff" text-anchor="middle">03</text>
+
+  <path d="M500 618 L500 654" fill="none" stroke="#01decb" stroke-opacity="0.5" stroke-width="2.6" marker-end="url(#arw)"/>
+  <text x="524" y="643" font-size="16" letter-spacing="2" fill="#63798D">PROOF OF DELIVERY</text>
+
+  <!-- step 04 -->
+  <rect x="56" y="656" width="888" height="120" rx="20" fill="url(#cardGrad)" stroke="#01decb" stroke-opacity="0.20" stroke-width="1.5"/>
+  <circle cx="116" cy="716" r="30" fill="#01decb" fill-opacity="0.10" stroke="#01decb" stroke-opacity="0.30"/>
+  <g transform="translate(116,716)" stroke="#01decb" stroke-width="2.4" fill="none" stroke-linejoin="round">
+    <rect x="-16" y="-12" width="32" height="24" rx="6" fill="#01decb" fill-opacity="0.14"/>
+    <path d="M-16 -4 L16 -4"/>
+    <circle cx="8" cy="4" r="2.8" fill="#01decb" stroke="none"/>
+  </g>
+  <text x="172" y="710" font-size="28" font-weight="700" fill="#FFFFFF">Weekly Settlement</text>
+  <text x="172" y="742" font-size="20" fill="#93A3B4">Reconciled reporting and a single payout</text>
+  <circle cx="898" cy="716" r="20" fill="#7c6af7" fill-opacity="0.16" stroke="#7c6af7" stroke-opacity="0.5"/>
+  <text x="898" y="723" font-size="15" font-weight="700" fill="#b3a8ff" text-anchor="middle">04</text>
+
+  <!-- stat chips -->
+  <g>
+    <rect x="114" y="818" width="224" height="46" rx="23" fill="#101F31" stroke="#01decb" stroke-opacity="0.16"/>
+    <circle cx="140" cy="841" r="5" fill="#01decb"/>
+    <text x="158" y="848" font-size="19" fill="#B4C2D0">302 delivery days</text>
+    <rect x="358" y="818" width="224" height="46" rx="23" fill="#101F31" stroke="#01decb" stroke-opacity="0.16"/>
+    <circle cx="384" cy="841" r="5" fill="#01decb"/>
+    <text x="402" y="848" font-size="19" fill="#B4C2D0">Live GPS tracking</text>
+    <rect x="602" y="818" width="283" height="46" rx="23" fill="#101F31" stroke="#01decb" stroke-opacity="0.16"/>
+    <circle cx="628" cy="841" r="5" fill="#01decb"/>
+    <text x="646" y="848" font-size="19" fill="#B4C2D0">Insured &amp; vetted riders</text>
+  </g>
+</svg>

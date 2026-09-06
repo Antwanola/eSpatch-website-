@@ -373,6 +373,7 @@ export default function InvestorsPage() {
                                         View Investor Deck
                                     </Button>
                                     <Button
+                                        as='a'
                                         bg="transparent"
                                         border="1px solid"
                                         borderColor={NAVY_BORDER}
@@ -385,6 +386,7 @@ export default function InvestorsPage() {
                                         borderRadius="10px"
                                         _hover={{ borderColor: TEAL, color: TEAL }}
                                         transition="all 0.2s"
+                                        href="/how-it-works"
                                     >
                                         <HStack gap={2}>
                                             <Text>How it Works</Text>
@@ -682,7 +684,7 @@ export default function InvestorsPage() {
                                 {/* top-to-bottom fade overlay */}
                                 <Image
                                     position="absolute"
-                                    src="/bikes/15.png"
+                                    src="/possibilities.jpeg"
                                     inset={0}
                                     bg="linear-gradient(to bottom, rgba(255,255,255,0.03) 0%, transparent 55%, rgba(0,0,0,0.25) 100%)"
                                     pointerEvents="none"
