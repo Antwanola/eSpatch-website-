@@ -69,12 +69,11 @@ export default function InfoCards({
             {/* TITLE */}
             <Heading
                 fontFamily="Syne"
-                fontSize={{ base: "22px", md: "26px" }}
-                fontWeight="500"
-                mb={4}
+                fontSize={{ base: "18px", md: "20px" }}
+                fontWeight="600"
+                mb={3}
                 color="#0F172A"
-                lineHeight="1.2"
-                letterSpacing="-0.02em"
+                lineHeight="1.3"
             >
                 {title}
             </Heading>
@@ -82,27 +81,28 @@ export default function InfoCards({
             {/* DESCRIPTION */}
             <Text
                 color="gray.600"
-                fontSize="16px"
-                lineHeight="1.8"
-                mb={10}
+                fontFamily="'DM Sans', sans-serif"
+                fontSize="15px"
+                lineHeight="1.65"
+                mb={8}
             >
                 {sub}
             </Text>
 
             {/* DIVIDER */}
-            <Separator mb={8} borderColor="gray.100" />
+            <Separator mb={6} borderColor="gray.100" />
 
             {/* CHECK LIST */}
-            <Flex direction="column" gap={5}>
+            <Flex direction="column" gap={4}>
                 {checktext.map((check, index) => (
                     <Flex
                         key={`${check}-${index}`}
                         align="flex-start"
-                        gap={4}
+                        gap={3}
                     >
                         <Box
                             color="#00B4A5"
-                            fontSize="18px"
+                            fontSize="16px"
                             mt="2px"
                         >
                             {checkIcon}
@@ -110,9 +110,10 @@ export default function InfoCards({
 
                         <Text
                             color="gray.600"
-                            fontSize="15px"
+                            fontFamily="'DM Sans', sans-serif"
+                            fontSize="14px"
                             fontWeight="500"
-                            lineHeight="short"
+                            lineHeight="1.5"
                         >
                             {check}
                         </Text>

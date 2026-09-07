@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
                     border={'0.5px solid'}
                     borderRadius={'20px'}
                     px={3} py={1}
-                    fontSize={'xs'}
+                    fontSize={'11px'}
                     borderColor={'#01decb4c'}
                     bg={'#00867b4c'}
                     whiteSpace={'nowrap'}
@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
                     <span className="gps-icon">
                         <MdGpsFixed size={14} color='currentColor' />
                     </span>
-                    <Box color={'text.green'} as={'span'} letterSpacing={'wider'} fontWeight={'medium'}>
+                    <Box color={'text.green'} as={'span'} letterSpacing={'0.12em'} fontWeight={'600'} fontFamily="'DM Sans', sans-serif">
                         FLEET-AS-A-SERVICE &nbsp;·&nbsp; LAGOS
                     </Box>
                 </Flex>
@@ -96,9 +96,9 @@ const Hero: React.FC = () => {
                     letterSpacing={'tight'}
                     color={'white'}
                     fontWeight={'700'}
-                    lineHeight={'1.07'}
-                    mb={10}
-                    mt={10}
+                    lineHeight={'1.08'}
+                    mb={6}
+                    mt={4}
                     fontFamily={'Syne'}
                 >
                     Lagos Deliveries.{' '}
@@ -108,21 +108,21 @@ const Hero: React.FC = () => {
 
                 <Text
                     color={'whiteAlpha.700'}
-                    fontSize={{ base: 'md', md: 'lg' }}
-                    lineHeight={'tall'}
-                    letterSpacing={'wide'}
+                    fontSize={{ base: '16px', md: '18px' }}
+                    lineHeight={'1.7'}
+                    fontFamily="'DM Sans', sans-serif"
                     maxW={'420px'}
                 >
                     eSpatch provides delivery platforms with a single B2B contract — professional riders, electric motorcycles, zero liability.
                 </Text>
 
-                <Flex gap={{ base: 4, md: 10 }} flexDir={{ base: 'column', sm: 'row' }}>
+                <Flex gap={{ base: 4, md: 6 }} flexDir={{ base: 'column', sm: 'row' }}>
                     <Link href="/contact#partner-form">
-                        <Button as='button' className='btn' mt={10} bg={'button'} borderRadius={10} color={'bg'} size={'lg'}>
+                        <Button as='button' className='btn' mt={8} bg={'button'} borderRadius={10} color={'bg'} size={'lg'} fontSize={'15px'} fontWeight={'600'}>
                             Partner with us <ArrowForward />
                         </Button>
                     </Link>
-                    <Button as='button' mt={10} borderRadius={10} bg={'transparent'} border={'0.5px solid'} borderColor={'text'} size={'lg'}>
+                    <Button as='button' mt={8} borderRadius={10} bg={'transparent'} border={'0.5px solid'} borderColor={'text'} size={'lg'} fontSize={'15px'} fontWeight={'600'}>
                         Learn more <ArrowForward />
                     </Button>
                 </Flex>
@@ -141,11 +141,11 @@ const Hero: React.FC = () => {
                 >
                     {trustBadges.map((item, i, arr) => (
                         <React.Fragment key={item.label}>
-                            <Flex align={'center'} gap={2} px={{ base: 3, sm: 4 }} py={3} fontSize={{ base: 'xs', sm: 'sm' }}>
+                            <Flex align={'center'} gap={2} px={{ base: 3, sm: 4 }} py={3} fontSize={{ base: '12px', sm: '13px' }} fontFamily="'DM Sans', sans-serif">
                                 <Box as={'span'} color={'#01decb'} display={'flex'} alignItems={'center'}>
                                     {item.icon}
                                 </Box>
-                                <Box as={'span'} color={'gray.300'} fontWeight={'400'} whiteSpace={'nowrap'}>
+                                <Box as={'span'} color={'gray.300'} fontWeight={'500'} whiteSpace={'nowrap'}>
                                     {item.label}
                                 </Box>
                             </Flex>

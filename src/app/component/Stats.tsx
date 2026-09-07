@@ -40,13 +40,13 @@ const Stats: React.FC<Props> = () => {
           <Box alignSelf={'center'} fontSize={'sm'} color={'button'} bgColor={'#00867b21'} p={2} borderRadius={'xl'} border={'1px ridge #00867b'}>
             {item.icon}
           </Box>
-          <Box alignSelf={'center'} as={'header'} color={'button'} fontWeight={700} fontSize={'4xl'} fontFamily={'Syne'} >
+          <Box alignSelf={'center'} as={'header'} color={'button'} fontWeight={700} fontSize={{ base: '32px', md: '40px' }} fontFamily={'Syne'} lineHeight="1.1" my={1}>
             {item.value}
           </Box>
-          <Text alignSelf={'center'} letterSpacing={0.5} color={'gray.400'} textAlign={'center'} fontFamily={'Syne'}>
+          <Text alignSelf={'center'} color={'gray.300'} textAlign={'center'} fontFamily="'DM Sans', sans-serif" fontSize="14px" fontWeight="500">
             {item.label}
           </Text>
-          <Text alignSelf={'center'} color={'Graytext'} fontSize={'xs'} fontFamily={'Syne'}>
+          <Text alignSelf={'center'} color={'gray.500'} fontSize={'11px'} letterSpacing={'0.12em'} fontFamily="'DM Sans', sans-serif" fontWeight="600" mt={1}>
             {item.sub}
           </Text>
         </Flex>

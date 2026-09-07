@@ -1,3 +1,4 @@
+"use client";
 import { Box, Flex, Heading, Text, SimpleGrid } from '@chakra-ui/react';
 import React from 'react';
 import InfoCards from './InfoCards';
@@ -31,20 +32,24 @@ const WhiteCTA: React.FC<Props> = () => {
           py={1}
           bg="#00867b2c"
         >
-          <Text
+<Text
             color="teal.500"
-            fontSize="xs"
+            fontSize="11px"
             fontWeight="600"
-            letterSpacing="wider"
+            letterSpacing="0.12em"
+            fontFamily="'DM Sans', sans-serif"
           >
             WHY ESPATCH ?
           </Text>
         </Flex>
 
+
         <Heading
+          fontFamily="Syne"
+          fontWeight="700"
           textAlign="center"
-          fontSize={{ base: "30px", md: "42px", lg: "54px" }}
-          lineHeight="1.1"
+          fontSize={{ base: "28px", md: "36px", lg: "44px" }}
+          lineHeight="1.15"
           maxW="850px"
         >
           Built for platforms. Designed for scale
@@ -54,7 +59,9 @@ const WhiteCTA: React.FC<Props> = () => {
           mt={6}
           textAlign="center"
           color="gray.500"
+          fontFamily="'DM Sans', sans-serif"
           fontSize={{ base: "16px", md: "18px" }}
+          lineHeight="1.7"
           maxW="600px"
         >
           One contract covers everything. We own the risk,
@@ -114,4 +121,4 @@ const WhiteCTA: React.FC<Props> = () => {
   );
 };
 
-export default WhiteCTA;
+export default WhiteCTA;

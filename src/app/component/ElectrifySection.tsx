@@ -95,11 +95,12 @@ export default function ElectrifySection() {
             py={1}
           >
             <Text
-              fontSize="10px"
-              fontWeight="700"
-              letterSpacing="0.18em"
+              fontSize="11px"
+              fontWeight="600"
+              letterSpacing="0.12em"
               color="rgba(0,200,180,0.9)"
               textTransform="uppercase"
+              fontFamily="'DM Sans', sans-serif"
             >
               Start Today
             </Text>
@@ -108,9 +109,9 @@ export default function ElectrifySection() {
           {/* Headline */}
           <Heading
             as="h2"
-            fontSize={{ base: "36px", md: "52px", lg: "58px" }}
+            fontSize={{ base: "32px", md: "44px", lg: "52px" }}
             fontWeight="700"
-            lineHeight="1.1"
+            lineHeight="1.12"
             color="white"
             letterSpacing="-0.02em"
             fontFamily={'Syne'}
@@ -122,9 +123,10 @@ export default function ElectrifySection() {
 
           {/* Subtext */}
           <Text
-            fontSize={{ base: "15px", md: "16px" }}
-            color="rgba(255,255,255,0.55)"
-            maxW="420px"
+            fontSize={{ base: "16px", md: "18px" }}
+            color="rgba(255,255,255,0.7)"
+            fontFamily="'DM Sans', sans-serif"
+            maxW="460px"
             lineHeight="1.7"
           >
             Join Lagos&apos; most innovative delivery platforms. One contract,
@@ -138,7 +140,7 @@ export default function ElectrifySection() {
                 size="lg"
                 bg="rgba(0,200,170,0.9)"
                 color="white"
-                fontWeight="700"
+                fontWeight="600"
                 fontSize="15px"
                 px={7}
                 py={6}
@@ -191,11 +193,11 @@ export default function ElectrifySection() {
             w="full"
           >
             {badges.map(({ icon: IconComp, label }, i) => (
-              <HStack key={i} gap={2} color="rgba(255,255,255,0.45)">
+              <HStack key={i} gap={2} color="rgba(255,255,255,0.55)">
                 <Box color="rgba(0,200,180,0.7)">
                   <IconComp />
                 </Box>
-                <Text fontSize="12px" fontWeight="500" letterSpacing="0.02em">
+                <Text fontSize="13px" fontWeight="500" letterSpacing="0.02em" fontFamily="'DM Sans', sans-serif">
                   {label}
                 </Text>
                 {i < badges.length - 1 && (

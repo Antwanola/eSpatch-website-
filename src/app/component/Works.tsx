@@ -37,13 +37,14 @@ export default function Works() {
                 <Flex gap={6} flexDirection={'column'} px={6} justifyContent={'center'} alignItems={'center'}>
                     <Heading
                         fontFamily="Syne"
-                        fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+                        fontSize={{ base: '28px', md: '36px', lg: '44px' }}
                         textAlign="center"
                     >
                         Our Process
                     </Heading>
                     <Text
-                        fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}
+                        fontSize={{ base: '16px', md: '18px' }}
+                        fontFamily="'DM Sans', sans-serif"
                         textAlign={'center'}
                         maxW="600px"
                         color="gray.400"
