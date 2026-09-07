@@ -120,34 +120,34 @@ const FleetPage: React.FC = () => {
                                 border="0.5px solid" borderRadius="20px" px={3} py={1}
                                 borderColor="#01decb4c" bg="#00867b4c" whiteSpace="nowrap">
                                 <span className="gps-icon"><MdGpsFixed size={13} color="currentColor" /></span>
-                                <Text color="#01decb" letterSpacing="wider" fontWeight="medium"
-                                    fontSize="10px" fontFamily="'DM Sans', sans-serif">
+                                <Text color="#01decb" letterSpacing="0.12em" fontWeight="600"
+                                    fontSize="11px" fontFamily="'DM Sans', sans-serif">
                                     Built for Lagos. Ready for Africa.
                                 </Text>
                             </Flex>
 
-                            <Text fontFamily="'Syne', sans-serif" fontWeight={600}
-                                fontSize={{ base: '2.8rem', md: '3.5rem', lg: '4.2rem' }}
-                                color="white" lineHeight={1.05} letterSpacing="-0.03em" mb={5}>
+                            <Text fontFamily="'Syne', sans-serif" fontWeight={700}
+                                fontSize={{ base: '32px', md: '44px', lg: '56px' }}
+                                color="white" lineHeight={1.08} letterSpacing="-0.03em" mb={5}>
                                 The Future of{' '}
                                 <Box as="span" color="#01decb">Urban</Box>
                                 <br />Logistics.
                             </Text>
 
                             <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2"
-                                fontSize={{ base: 'md', md: 'lg' }} lineHeight={1.75} maxW="380px" mb={8}>
+                                fontSize={{ base: '16px', md: '18px' }} lineHeight={1.7} maxW="380px" mb={8}>
                                 Zero emissions. Data-driven. Our purpose-built electric fleet is
                                 engineered for last-mile delivery across the continent.
                             </Text>
 
                             <Flex gap={4} flexWrap="wrap">
-                                <Button fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize="sm"
+                                <Button fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize="14px"
                                     bg="white" color="#0D1B2A" px={7} py={5} borderRadius="full"
                                     _hover={{ bg: '#01decb', color: 'white', boxShadow: '0 8px 30px rgba(1,222,203,0.25)', transform: 'translateY(-2px)' }}
                                     transition="all 0.2s">
                                     Explore Fleet
                                 </Button>
-                                <Button fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize="sm"
+                                <Button fontFamily="'DM Sans', sans-serif" fontWeight={600} fontSize="14px"
                                     bg="transparent" color="white" px={7} py={5} borderRadius="full"
                                     border="1px solid" borderColor="whiteAlpha.300"
                                     _hover={{ borderColor: '#01decb', color: '#01decb', transform: 'translateY(-2px)' }}
@@ -175,9 +175,9 @@ const FleetPage: React.FC = () => {
                                 bg="rgba(10,22,40,0.92)" backdropFilter="blur(8px)"
                                 border="1px solid" borderColor="#01decb33"
                                 borderRadius="xl" px={4} py={3}>
-                                <Text fontFamily="'Syne', sans-serif" fontWeight={600}
-                                    fontSize="1.4rem" color="#01decb" lineHeight={1}>100%</Text>
-                                <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2" fontSize="10px">
+                                <Text fontFamily="'Syne', sans-serif" fontWeight={700}
+                                    fontSize="24px" color="#01decb" lineHeight={1}>100%</Text>
+                                <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2" fontSize="11px" fontWeight={500}>
                                     Electric Fleet
                                 </Text>
                             </Box>
@@ -194,8 +194,8 @@ const FleetPage: React.FC = () => {
 
                         {/* Left: heading + stats */}
                         <Box>
-                            <Text fontFamily="'Syne', sans-serif" fontWeight={600}
-                                fontSize={{ base: '1.8rem', md: '2.2rem', lg: '2.75rem' }}
+                            <Text fontFamily="'Syne', sans-serif" fontWeight={700}
+                                fontSize={{ base: '28px', md: '36px', lg: '44px' }}
                                 color="#0D1B2A" lineHeight={1.15} mb={6}>
                                 Purpose-Built for{' '}
                                 <Box as="span" color="#12635c" position="relative"
@@ -210,9 +210,9 @@ const FleetPage: React.FC = () => {
                                     <React.Fragment key={s.label}>
                                         <Box>
                                             <Text fontFamily="'Syne', sans-serif" fontWeight={700}
-                                                fontSize="2rem" color="#01decb" lineHeight={1}>{s.value}</Text>
+                                                fontSize="32px" color="#01decb" lineHeight={1}>{s.value}</Text>
                                             <Text fontFamily="'DM Sans', sans-serif" color="#4D596E"
-                                                fontSize="xs" mt={1}>{s.label}</Text>
+                                                fontSize="13px" mt={1}>{s.label}</Text>
                                         </Box>
                                         {i < stats.length - 1 && <div className="stat-divider" />}
                                     </React.Fragment>
@@ -223,7 +223,7 @@ const FleetPage: React.FC = () => {
                         {/* Right: body copy */}
                         <Box>
                             <Text fontFamily="'DM Sans', sans-serif" color="#4D596E"
-                                fontSize={{ base: 'md', md: 'lg' }} lineHeight={1.8} mb={5}>
+                                fontSize={{ base: '16px', md: '18px' }} lineHeight={1.7} mb={5}>
                                 Lagos is one of the fastest-growing cities in the world, yet its
                                 last-mile delivery infrastructure remains fragmented and carbon-heavy.{' '}
                                 <Box as="span" fontWeight={600} color="#0D1B2A">eSpatch</Box>{' '}
@@ -231,7 +231,7 @@ const FleetPage: React.FC = () => {
                                 high-efficiency load delivery, and zero-compromise uptime.
                             </Text>
                             <Text fontFamily="'DM Sans', sans-serif" color="#4D596E"
-                                fontSize={{ base: 'md', md: 'lg' }} lineHeight={1.8}>
+                                fontSize={{ base: '16px', md: '18px' }} lineHeight={1.7}>
                                 By combining proprietary battery management systems with a professionally
                                 managed fleet of 100% electric vehicles, we created a system that isn't
                                 just "green" — it's smarter and more efficient than traditional
@@ -247,8 +247,8 @@ const FleetPage: React.FC = () => {
                 <MainMargin>
                     <Box textAlign="center" mb={{ base: 10, md: 14 }}>
                         <Text fontFamily="'Syne', sans-serif" fontWeight={700}
-                            fontSize={{ base: '1.8rem', md: '2.5rem', lg: '3rem' }}
-                            color="white" lineHeight={1.1} mb={3}>
+                            fontSize={{ base: '28px', md: '36px', lg: '44px' }}
+                            color="white" lineHeight={1.15} mb={3}>
                             Fleet{' '}
                             <Box as="span" color="#01decb" position="relative"
                                 _after={{ content: '""', position: 'absolute', bottom: '-4px', left: 0, width: '100%', height: '3px', background: '#01decb', opacity: 0.4, borderRadius: '2px' }}>
@@ -256,7 +256,7 @@ const FleetPage: React.FC = () => {
                             </Box>
                         </Text>
                         <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2"
-                            fontSize={{ base: 'sm', md: 'md' }} maxW="440px" mx="auto" lineHeight={1.7}>
+                            fontSize={{ base: '15px', md: '16px' }} maxW="440px" mx="auto" lineHeight={1.65}>
                             Every metric engineered for Nigerian road conditions and last-mile performance.
                         </Text>
                     </Box>
@@ -273,17 +273,17 @@ const FleetPage: React.FC = () => {
                                                 align="center" justify="center" mb={5} color="#01decb">
                                                 <spec.icon size={20} />
                                             </Flex>
-                                            <Text fontFamily="'DM Sans', sans-serif" fontSize="9px"
-                                                letterSpacing="0.15em" color="#01decb" mb={2} fontWeight={600}>
+                                            <Text fontFamily="'DM Sans', sans-serif" fontSize="11px"
+                                                letterSpacing="0.12em" color="#01decb" mb={2} fontWeight={600}>
                                                 ✓ KEY METRIC
                                             </Text>
                                             <Text fontFamily="'Syne', sans-serif" fontWeight={700}
-                                                fontSize="2rem" color="#01decb" lineHeight={1} mb={1}>
+                                                fontSize="32px" color="#01decb" lineHeight={1} mb={1}>
                                                 {spec.value}
                                             </Text>
                                             <Text fontFamily="'Syne', sans-serif" fontWeight={600}
-                                                color="white" fontSize="sm" mb={1}>{spec.label}</Text>
-                                            <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2" fontSize="xs">
+                                                color="white" fontSize="15px" mb={1}>{spec.label}</Text>
+                                            <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2" fontSize="13px">
                                                 {spec.sub}
                                             </Text>
                                         </div>
@@ -299,17 +299,17 @@ const FleetPage: React.FC = () => {
                                         align="center" justify="center" mb={5} color="#01decb">
                                         <spec.icon size={20} />
                                     </Flex>
-                                    <Text fontFamily="'DM Sans', sans-serif" fontSize="9px"
-                                        letterSpacing="0.15em" color="#9AA4B2" mb={2} fontWeight={600}>
+                                    <Text fontFamily="'DM Sans', sans-serif" fontSize="11px"
+                                        letterSpacing="0.12em" color="#9AA4B2" mb={2} fontWeight={600}>
                                         ✓ SPEC
                                     </Text>
                                     <Text fontFamily="'Syne', sans-serif" fontWeight={700}
-                                        fontSize="2rem" color="#01decb" lineHeight={1} mb={1}>
+                                        fontSize="32px" color="#01decb" lineHeight={1} mb={1}>
                                         {spec.value}
                                     </Text>
                                     <Text fontFamily="'Syne', sans-serif" fontWeight={600}
-                                        color="white" fontSize="sm" mb={1}>{spec.label}</Text>
-                                    <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2" fontSize="xs">
+                                        color="white" fontSize="15px" mb={1}>{spec.label}</Text>
+                                    <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2" fontSize="13px">
                                         {spec.sub}
                                     </Text>
                                 </Box>
@@ -328,7 +328,7 @@ const FleetPage: React.FC = () => {
                         {/* Left: swap feature cards */}
                         <Box>
                             <Text fontFamily="'Syne', sans-serif" fontWeight={700}
-                                fontSize={{ base: '1.8rem', md: '2.2rem', lg: '2.75rem' }}
+                                fontSize={{ base: '28px', md: '36px', lg: '44px' }}
                                 color="#0D1B2A" lineHeight={1.15} mb={4}>
                                 The Swap{' '}
                                 <Box as="span" color="#12635c" position="relative"
@@ -337,7 +337,7 @@ const FleetPage: React.FC = () => {
                                 </Box>
                             </Text>
                             <Text fontFamily="'DM Sans', sans-serif" color="#4D596E"
-                                fontSize={{ base: 'md', md: 'lg' }} lineHeight={1.75} mb={8} maxW="400px">
+                                fontSize={{ base: '16px', md: '18px' }} lineHeight={1.7} mb={8} maxW="400px">
                                 Fast-charging infrastructure strategically placed across Lagos
                                 corridors for near-zero downtime. Our operations are directly
                                 aligned for maximum rider efficiency.

@@ -22,9 +22,9 @@ export default function ProcessBox({ step, title, description, icon, iconColor }
                 <Icon as={icon} />
             </Box>
             <Box>
-                <Text fontSize="xs" fontWeight="bold" color="#00B4A5" mb={1}>{step}</Text>
-                <Heading size="md" mb={3} color="white">{title}</Heading>
-                <Text fontSize="sm" color="gray.400" lineHeight="tall">{description}</Text>
+                <Text fontSize="11px" fontWeight="600" letterSpacing="0.12em" color="#00B4A5" mb={1} fontFamily="'DM Sans', sans-serif">{step}</Text>
+                <Heading fontSize="18px" fontFamily="Syne" fontWeight="600" mb={3} color="white">{title}</Heading>
+                <Text fontSize="15px" fontFamily="'DM Sans', sans-serif" color="gray.400" lineHeight="1.65">{description}</Text>
             </Box>
         </Box >
     )

@@ -154,13 +154,13 @@ const HowItWorks: React.FC = () => {
             <Flex mb={8} align="center" display="inline-flex" gap={2} border="0.5px solid"
               borderRadius="20px" px={3} py={1} borderColor="#01decb4c" bg="#00867b4c" whiteSpace="nowrap">
               <span className="gps-icon"><MdGpsFixed size={14} color="currentColor" /></span>
-              <Box color="#01decb" as="span" letterSpacing="wider" fontWeight="medium" fontSize="10px">
+              <Box color="#01decb" as="span" letterSpacing="0.12em" fontWeight="600" fontSize="11px" fontFamily="'DM Sans', sans-serif">
                 Enterprise Logistics Engine
               </Box>
             </Flex>
-            <Box fontSize={{ base: '2.5rem', md: '3.5rem', lg: '4rem' }} fontWeight={700}
+            <Box fontSize={{ base: '32px', md: '44px', lg: '56px' }} fontWeight={700}
               fontFamily="'Syne', sans-serif" letterSpacing={{ base: '-0.02em', md: '-0.03em' }}
-              lineHeight={{ base: 1.1, md: 1.05 }} color="white" mb={5}>
+              lineHeight={{ base: 1.08, md: 1.08 }} color="white" mb={5}>
               How{' '}
               <Box as="span" color="#01decb" position="relative"
                 _after={{ content: '""', position: 'absolute', bottom: '-4px', left: 0, width: '100%', height: '3px', background: '#01decb', opacity: 0.4, borderRadius: '2px' }}>
@@ -168,7 +168,7 @@ const HowItWorks: React.FC = () => {
               </Box>{' '}<br />Works
             </Box>
             <Text mb={8} fontFamily="'DM Sans', sans-serif" color="#9AA4B2"
-              fontSize={{ base: 'md', md: 'lg' }} fontWeight={400} lineHeight={1.7} maxW="420px">
+              fontSize={{ base: '16px', md: '18px' }} fontWeight={400} lineHeight={1.7} maxW="420px">
               A seamless B2B logistics model designed for scale, reliability, and operational excellence.
             </Text>
             <Button
@@ -176,7 +176,7 @@ const HowItWorks: React.FC = () => {
                 document.getElementById('our-process')?.scrollIntoView({ behavior: 'smooth' });
               }}
               borderRadius={10} bg="#167c5729" color="#01decb" border="1px solid"
-              borderColor="#01decb44" px={6} py={5} fontSize="sm" fontFamily="'DM Sans', sans-serif"
+              borderColor="#01decb44" px={6} py={5} fontSize="14px" fontWeight="600" fontFamily="'DM Sans', sans-serif"
               _hover={{ bg: '#01decb22', cursor: 'pointer' }} transition="background 0.2s">
               View Process
             </Button>
@@ -185,7 +185,7 @@ const HowItWorks: React.FC = () => {
             <picture>
               <source media="(min-width: 48em)" srcSet="/dispatch-flow.png" />
               <img src="/dispatch-flow-mobile.png"
-                alt="Diagram of the eSpatch dispatch flow: an order arrives from the partner platform, the dispatch engine matches the nearest vetted rider, the rider completes the GPS-tracked last-mile delivery, and the partner receives a reconciled weekly settlement"
+                alt="Diagram of the eSpatch dispatch flow"
                 style={{ display: 'block', width: '100%', height: 'auto' }} />
             </picture>
           </Box>
@@ -196,8 +196,8 @@ const HowItWorks: React.FC = () => {
       <Box id="our-process" bg="#ffffffff" py={{ base: 14, md: 20 }} px={{ base: 4, md: 10 }}>
         <MainMargin>
           <Box textAlign="center" mb={{ base: 10, md: 14 }}>
-            <Heading color="#0D1B2A" fontFamily="'Syne', sans-serif"
-              fontSize={{ base: '2xl', md: '3xl', lg: '3rem' }} mb={4}>
+            <Heading color="#0D1B2A" fontFamily="'Syne', sans-serif" fontWeight={700}
+              fontSize={{ base: '28px', md: '36px', lg: '44px' }} mb={4}>
               Our{' '}
               <Box as="span" color="#12635c" position="relative"
                 _after={{ content: '""', position: 'absolute', bottom: '-4px', left: 0, width: '100%', height: '3px', background: '#01decb', opacity: 0.4, borderRadius: '2px' }}>
@@ -205,7 +205,7 @@ const HowItWorks: React.FC = () => {
               </Box>
             </Heading>
             <Text color="#4D596E" fontFamily="'DM Sans', sans-serif"
-              fontSize={{ base: 'md', md: 'lg' }} fontWeight={400} maxW="480px" mx="auto" lineHeight={1.7}>
+              fontSize={{ base: '16px', md: '18px' }} fontWeight={400} maxW="480px" mx="auto" lineHeight={1.7}>
               A collaborative structure designed for scale, transparency, and operational excellence.
             </Text>
           </Box>
@@ -230,9 +230,9 @@ const HowItWorks: React.FC = () => {
       {/* ── Section 3: Who Does What ── */}
       <Box bg="#DDE4EA" py={{ base: 14, md: 24 }} px={{ base: 4, md: 10 }}>
         <Box textAlign="center" mb={{ base: 10, md: 14 }}>
-          <Heading fontFamily="'Syne', sans-serif" fontWeight={600}
-            fontSize={{ base: '2rem', md: '2.75rem', lg: '3rem' }}
-            color="#0D1B2A" lineHeight={1.1} mb={3}>
+          <Heading fontFamily="'Syne', sans-serif" fontWeight={700}
+            fontSize={{ base: '28px', md: '36px', lg: '44px' }}
+            color="#0D1B2A" lineHeight={1.15} mb={3}>
             Who Does{' '}
             <Box as="span" color="#01decb" position="relative"
               _after={{ content: '""', position: 'absolute', bottom: '-4px', left: 0, width: '100%', height: '3px', background: '#01decb', opacity: 0.4, borderRadius: '2px' }}>
@@ -333,9 +333,9 @@ const HowItWorks: React.FC = () => {
               <Text
                 fontFamily="'Syne', sans-serif"
                 fontWeight={700}
-                fontSize={{ base: '1.6rem', md: '2rem', lg: '2.25rem' }}
+                fontSize={{ base: '22px', md: '28px', lg: '32px' }}
                 color="white"
-                lineHeight={1.15}
+                lineHeight={1.2}
                 mb={3}
               >
                 Operational{' '}
@@ -345,7 +345,7 @@ const HowItWorks: React.FC = () => {
                 </Box>
               </Text>
               <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2"
-                fontSize="sm" lineHeight={1.7} mb={7} maxW="340px">
+                fontSize="14px" lineHeight={1.65} mb={7} maxW="340px">
                 Strategic geofenced zones optimised for density and speed.
               </Text>
 
@@ -356,12 +356,12 @@ const HowItWorks: React.FC = () => {
 
                 {/* Active corridor label */}
                 <Box position="relative" zIndex={1}>
-                  <Text fontFamily="'DM Sans', sans-serif" fontSize="9px"
-                    letterSpacing="0.15em" color="#9AA4B2" mb={1}>
+                  <Text fontFamily="'DM Sans', sans-serif" fontSize="11px"
+                    letterSpacing="0.12em" color="#9AA4B2" mb={1} fontWeight={600}>
                     ACTIVE CORRIDOR
                   </Text>
                   <Text fontFamily="'Syne', sans-serif" fontWeight={700}
-                    fontSize="sm" color="white">
+                    fontSize="14px" color="white">
                     Sangotedo – Adeniji Adele
                   </Text>
                 </Box>
@@ -393,7 +393,7 @@ const HowItWorks: React.FC = () => {
                   borderRadius="full" px={3} py={2} w="fit-content">
                   <div className="pulse-dot" />
                   <Text fontFamily="'DM Sans', sans-serif" fontSize="11px"
-                    color="#01decb" fontWeight={500}>
+                    color="#01decb" fontWeight={600}>
                     Battery Swap Stations Active
                   </Text>
                 </Flex>
@@ -405,9 +405,9 @@ const HowItWorks: React.FC = () => {
               <Text
                 fontFamily="'Syne', sans-serif"
                 fontWeight={700}
-                fontSize={{ base: '1.6rem', md: '2rem', lg: '2.25rem' }}
+                fontSize={{ base: '22px', md: '28px', lg: '32px' }}
                 color="white"
-                lineHeight={1.15}
+                lineHeight={1.2}
                 mb={3}
               >
                 Service Level{' '}
@@ -417,7 +417,7 @@ const HowItWorks: React.FC = () => {
                 </Box>
               </Text>
               <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2"
-                fontSize="sm" lineHeight={1.7} mb={7} maxW="380px">
+                fontSize="14px" lineHeight={1.65} mb={7} maxW="380px">
                 Guaranteed performance metrics you can build your business on.
               </Text>
 
@@ -442,11 +442,11 @@ const HowItWorks: React.FC = () => {
                     </Flex>
                     <Box>
                       <Text fontFamily="'Syne', sans-serif" fontWeight={600}
-                        color="white" fontSize="sm" mb={1}>
+                        color="white" fontSize="15px" mb={1}>
                         {item.title}
                       </Text>
                       <Text fontFamily="'DM Sans', sans-serif" color="#9AA4B2"
-                        fontSize="sm" lineHeight={1.65}>
+                        fontSize="14px" lineHeight={1.65}>
                         {item.desc}
                       </Text>
                     </Box>
@@ -484,7 +484,7 @@ const HowItWorks: React.FC = () => {
           <Heading
             fontFamily="'Syne', sans-serif"
             fontWeight={700}
-            fontSize={{ base: '1.8rem', md: '2.5rem', lg: '3rem' }}
+            fontSize={{ base: '28px', md: '36px', lg: '44px' }}
             color="white"
             lineHeight={1.15}
             mb={4}
@@ -513,7 +513,7 @@ const HowItWorks: React.FC = () => {
           <Text
             fontFamily="'DM Sans', sans-serif"
             color="#9AA4B2"
-            fontSize={{ base: 'md', md: 'lg' }}
+            fontSize={{ base: '16px', md: '18px' }}
             lineHeight={1.7}
             mb={10}
           >

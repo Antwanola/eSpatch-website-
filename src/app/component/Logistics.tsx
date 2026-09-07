@@ -24,9 +24,10 @@ export default function Logistics() {
                 >
                     <FaLeaf />
                     <Text
-                        fontSize="xs"
-                        fontWeight="700"
-                        letterSpacing="0.1em"
+                        fontSize="11px"
+                        fontWeight="600"
+                        letterSpacing="0.12em"
+                        fontFamily="'DM Sans', sans-serif"
                     >
                         ESG COMMITMENT
                     </Text>
@@ -59,9 +60,9 @@ export default function Logistics() {
                     <Box flex={{ base: '1 1 100%', lg: '1.05 1 55%' }} gap={5} ml={7}>
                         <Heading
                             fontFamily="Syne"
-                            fontSize={{ base: "18px", md: "26px", lg: "38px" }}
-                            fontWeight="500"
-                            lineHeight="1.1"
+                            fontSize={{ base: "28px", md: "36px", lg: "44px" }}
+                            fontWeight="700"
+                            lineHeight="1.15"
                             color="gray.900"
                             mb={6}
                             textWrap={'wrap'}
@@ -69,9 +70,10 @@ export default function Logistics() {
                             Logistics That&apos;s Good for Lagos. And the Planet.
                         </Heading>
                         <Text
-                            fontSize={{ base: "md", md: "lg" }}
+                            fontSize={{ base: "16px", md: "18px" }}
+                            fontFamily="'DM Sans', sans-serif"
                             color="gray.600"
-                            lineHeight="tall"
+                            lineHeight="1.7"
                         >
                             Every eSpatch delivery is a petrol journey not made. We are building
                             the infrastructure for a net-zero urban supply chain in Sub-Saharan
@@ -122,8 +124,8 @@ month."  />
                         >
                             {/* Stat 1 */}
                             <Box flex="1" minW={{ base: '100%', sm: '0' }}>
-                                <Heading fontSize={{ base: '2xl', md: '3xl' }}>0kg</Heading>
-                                <Text color={'gray.500'} fontFamily={'var(--font-dm-sans)'} fontSize={{ base: 'sm', md: 'md' }}>
+                                <Heading fontSize={{ base: '28px', md: '36px' }} fontFamily="Syne" fontWeight="700">0kg</Heading>
+                                <Text color={'gray.600'} fontFamily="'DM Sans', sans-serif" fontSize="14px">
                                     Direct CO₂ per delivery
                                 </Text>
                             </Box>
@@ -133,8 +135,8 @@ month."  />
 
                             {/* Stat 2 */}
                             <Box flex="1" minW={{ base: '100%', sm: '0' }} px={{ base: 0, sm: 4 }}>
-                                <Heading fontSize={{ base: '2xl', md: '3xl' }}>100%</Heading>
-                                <Text color={'gray.500'} fontFamily={'var(--font-dm-sans)'} fontSize={{ base: 'sm', md: 'md' }}>
+                                <Heading fontSize={{ base: '28px', md: '36px' }} fontFamily="Syne" fontWeight="700">100%</Heading>
+                                <Text color={'gray.600'} fontFamily="'DM Sans', sans-serif" fontSize="14px">
                                     Electric fleet coverage
                                 </Text>
                             </Box>
@@ -148,7 +150,7 @@ month."  />
                                 minW={{ base: '100%', sm: '0' }}
                                 px={{ base: 0, sm: 4 }}
                             >
-                                <Heading fontSize={{ base: '2xl', md: '3xl' }}>SDG</Heading>
+                                <Heading fontSize={{ base: '28px', md: '36px' }} fontFamily="Syne" fontWeight="700">SDG</Heading>
                                 <Flex align="center" gap={2} mt={1} flexWrap="wrap">
                                     <Text color={'gray.500'} fontFamily={'var(--font-dm-sans)'} fontSize={{ base: 'xs', md: 'sm' }}>
                                         UN Goals aligned
